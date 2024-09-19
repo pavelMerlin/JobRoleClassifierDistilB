@@ -2,7 +2,7 @@
 
 This project performs multi-label classification of job titles, predicting labels such as job levels, roles, and responsibilities. It uses a pre-trained DistilBERT model, fine-tuned for the task of predicting multiple labels for each job title.
 
-[Link to a video with an small explanation](https://youtu.be/RUZ-wqrUY2w)
+[Link to a video with a small explanation](https://youtu.be/RUZ-wqrUY2w)
 
 ## Table of Contents
 
