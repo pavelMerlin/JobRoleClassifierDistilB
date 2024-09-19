@@ -82,7 +82,7 @@ The decisions made showed high accuracy on the test dataset.
 
 Results at the end of training:
 
-F1-score: 0.99%
-Accuracy: 0.98%
+F1-score: 0.99
+Accuracy: 0.98
 
 Completed for infuse test task.
