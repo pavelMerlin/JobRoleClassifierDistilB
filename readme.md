@@ -34,14 +34,9 @@ pip install -r requirements.txt
 
 ## Running the Model
 
-The file **analysis_distilBERT_multilabel.ipynb** contains a description of the decisions made and an analysis of the data. By studying this file you can understand the course of decision making.
+The file **analysis_distilBERT_multilabel.ipynb** contains a description of the decisions made and an analysis of the data. By studying this file you can understand the course of decision making. 
 
-The project includes two main Python scripts:
-
-- **distilBERT_model.py**: This script is used to train and save the DistilBERT model.
-- **generate_predictions.py**: This script is used to load the saved model and generate predictions on new job titles.
-
-Note: check the path to your dataset and for output (model save).
+The .py files with model_train and generation_from_the_model can be added to the git hub repository if needed.
 
 ## Data Preprocessing
 
@@ -78,7 +73,7 @@ Both metrics are computed on the training and test sets for each fold.
 
 ## Saving and Loading the Model
 
-After training, the model and tokenizer are saved for future use in file **sorted_distilBERT_multilabel_py**
+After training, the model and tokenizer are saved for future use in file **distilBERT_model**
 These can be loaded later for making predictions on new job titles.
 
 ## Results
