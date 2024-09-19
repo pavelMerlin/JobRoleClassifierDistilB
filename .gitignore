@@ -1,0 +1,22 @@
+# PyCharm project files
+.idea/
+
+# Virtual environment
+venv/
+env/
+
+# Model files and checkpoints
+COPY_distilBERT_multilabel.ipynb
+distilBERT_model_f199/
+sorted_distilBERT_multilabel_jupyter/
+
+# Dataset files
+JobLevelData.csv
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Unit test / coverage reports
+.pytest_cache/
+.coverage
