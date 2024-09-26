@@ -9,6 +9,7 @@ This project performs multi-label classification of job titles, predicting label
 - [Data Preprocessing](#data-preprocessing)
 - [Model](#model)
 - [Training and Cross-validation](#training-and-cross-validation)
+- [Experiments with class imbalance](#experiments-with-class-imbalance)
 - [Evaluation](#evaluation)
 - [Saving and Loading the Model](#saving-and-loading-the-model)
 - [Results](#results)
@@ -64,6 +65,33 @@ The model is trained using **5-fold Stratified Cross-validation** to ensure even
 - **Number of epochs**: 3
 
 For each fold, data is tokenized, padded to a uniform length, and passed through the model for training and validation.
+
+- The solution to class imbalance is assigning higher weights to the underrepresented classes.
+
+## Experiments with Class Imbalance
+
+### 1. Focal Loss for Class Imbalance
+- Focal Loss was used to handle class imbalance but failed to fully address the issue. The observations were:
+  1. **Errors remained** primarily in the underrepresented classes.
+  2. **Focal Loss performed worse** than `BCEWithLogitsLoss`.
+
+**Results**:
+- **F1-score on TEST set**: 0.989
+- **Accuracy on TEST set**: 0.981
+- **Wrong predictions**: 26 out of 2240
+
+### 2. Using `WeightedRandomSampler`
+- The `WeightedRandomSampler` was applied to oversample the underrepresented classes. The following issues were observed:
+  1. The model **no longer made errors** on underrepresented classes.
+  2. However, it **increased errors overall**.
+
+**Results**:
+- **F1-score on TEST set**: 0.986
+- **Accuracy on TEST set**: 0.982
+- **Wrong predictions**: 31 out of 2240
+
+### 3. Using `SMOTEENN`
+- `SMOTEENN` does not support multi-label tasks due to its limitation of only handling binary, multiclass, or single-encoded multiclass target variables.
 
 ## Evaluation
 
