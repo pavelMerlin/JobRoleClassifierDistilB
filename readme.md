@@ -112,5 +112,3 @@ Results at the end of training:
 
 F1-score: 0.99
 Accuracy: 0.99
-
-Completed for infuse test task.
